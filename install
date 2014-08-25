@@ -1,0 +1,31 @@
+#!/usr/bin/ruby
+
+require 'fileutils'
+
+dotdir = FileUtils.pwd
+homedir = ENV['HOME']
+puts "homedir: #{homedir}\n\n"
+
+Dir.glob('*') do |item|
+  next if item.start_with? '.'
+  next if "./#{item}" == __FILE__
+
+  if ARGV.include? 'destroy'
+    begin
+      FileUtils.rm File.join(homedir, ".#{item}")
+      puts "link ~/.#{item} destroyed"
+    rescue Errno::ENOENT
+      puts "link ~/.#{item} not found"
+    end
+  else
+    begin
+      target = File.join homedir, ".#{item}"
+      source = File.join dotdir, item
+      FileUtils.ln_s source, target
+
+      puts "linked #{item} to #{homedir}/.#{item}"
+    rescue Errno::EEXIST
+      puts "~/.#{item} already exists! Not linked!"
+    end
+  end
+end
