@@ -35,6 +35,7 @@ Plugin 'parkr/vim-jekyll'
 Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'mattn/emmet-vim'
+Plugin 'tomtom/tcomment_vim'
 
 call vundle#end()
 filetype plugin indent on
