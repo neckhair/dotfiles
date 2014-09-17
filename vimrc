@@ -157,6 +157,9 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = "Dispatch rspec {spec}"
 let g:rspec_runner = "os_x_iterm"
 
+" Syntastic Rubocop integration
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
 " Switch between splits C-j etc
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
