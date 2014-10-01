@@ -15,7 +15,7 @@ else
   export EDITOR=$VISUAL
 fi
 export SSH_KEY_PATH="~/.ssh/id_dsa.pub"
-export DOCKER_HOST=tcp://localhost:2375
+export DOCKER_HOST=tcp://dockerhost:2375
 
 # aliases
 alias zshconfig="$EDITOR ~/.zshrc"
@@ -26,6 +26,10 @@ alias mkdir='mkdir -p'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+
+alias tml="tmux list-sessions"
+alias tma="tmux -2 attach -t $1"
+alias tmk="tmux kill-session -t $1"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
