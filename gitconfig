@@ -1,5 +1,5 @@
 [alias]
-  co = checkout  
+  co = checkout
   l = log --pretty=oneline -n 20 --graph
   s = status -s
   remotes = remote -v
@@ -11,7 +11,7 @@
 
 [core]
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-  whitespace = space-before-tab,trailing-space 
+  whitespace = space-before-tab,trailing-space
 	excludesfile = /Users/phil/.gitignore
 	editor = vim
 
@@ -36,10 +36,6 @@
   # Include summaries of merged commits in newly created commits
   log = true
 
-[branch "master"]
-  remote = origin
-  merge = refs/heads/master
-
 [push]
   default = simple
 
@@ -49,7 +45,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
