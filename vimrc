@@ -114,7 +114,7 @@ set title
 " Always show the statusline
 set laststatus=2
 
-set textwidth=120
+set textwidth=110
 set colorcolumn=+1
 set nowrap
 
