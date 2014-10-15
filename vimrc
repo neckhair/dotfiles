@@ -37,6 +37,8 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'tomtom/tcomment_vim'
 
+Plugin 'christoomey/vim-tmux-navigator'
+
 call vundle#end()
 filetype plugin indent on
 
