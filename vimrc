@@ -49,7 +49,9 @@ let mapleader = ","
 colorscheme railscasts
 
 " Use the OS clipboard by default
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard=unnamed
+endif
 
 " Enhance command-line completion
 set wildmenu
