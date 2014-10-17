@@ -18,7 +18,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-surround'
 
@@ -169,3 +169,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" airline settings
+" Download Font and use it in iTerm2:
+" https://gist.github.com/baopham/1838072/raw/5fa73caa4af86285f11539a6b4b6c26cfca2c04b/Monaco%20for%20Powerline.otf
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
