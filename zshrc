@@ -11,7 +11,7 @@ ZSH_THEME="robbyrussell"
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export EDITOR=vim
 else
-  export VISUAL=mvim
+  export VISUAL=vim
   export EDITOR=$VISUAL
 fi
 export SSH_KEY_PATH="~/.ssh/id_dsa.pub"
@@ -34,7 +34,7 @@ alias tmk="tmux kill-session -t $1"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras osx rails bundler gem rvm brew vagrant)
+plugins=(git git-extras osx rails bundler gem rvm brew vagrant tmuxinator tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,10 +48,10 @@ function psgrep() { ps axu | grep -v grep | grep "$@" -i --color=auto; }
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # go to project
