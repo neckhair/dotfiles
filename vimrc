@@ -46,7 +46,7 @@ filetype plugin indent on
 let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors/)
-colorscheme railscasts
+colorscheme jellybeans
 
 " Use the OS clipboard by default
 if $TMUX == ''
