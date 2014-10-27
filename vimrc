@@ -50,9 +50,7 @@ colorscheme molokai
 let g:rehash256 = 1
 
 " Use the OS clipboard by default
-if $TMUX == ''
-  set clipboard=unnamed
-endif
+set clipboard=unnamed
 
 " Enhance command-line completion
 set wildmenu
