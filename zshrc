@@ -62,3 +62,16 @@ function p() {
   cd ~/src/$1
 }
 compctl -K pcompl p
+
+# Docker default config
+export DOCKER_HOST=tcp://192.168.59.104:2376
+export DOCKER_CERT_PATH=/Users/phil/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+function dcclean () { # clean docker container
+  docker rm $(docker ps -a -q)
+}
+
+function diclean() { # clean docker images
+  docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
+}
