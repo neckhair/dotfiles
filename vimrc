@@ -46,7 +46,7 @@ filetype plugin indent on
 let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors/)
-colorscheme molokai
+colorscheme jellybeans
 let g:rehash256 = 1
 
 " Use the OS clipboard by default
