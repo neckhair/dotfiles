@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mh"
+ZSH_THEME="clean"
 
 # User configuration
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
@@ -53,6 +53,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export MANAGEMENT_SERVER=phil
 
 # go to project
 function pcompl() {
