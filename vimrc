@@ -36,6 +36,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-endwise'
 
 Plugin 'christoomey/vim-tmux-navigator'
 
