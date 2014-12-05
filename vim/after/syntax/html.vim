@@ -21,3 +21,8 @@ syn keyword htmlArg contained contenteditable contextmenu draggable hidden item
 syn keyword htmlArg contained itemprop list subject spellcheck
 " this doesn't work because default syntax file alredy define a 'data' attribute
 syn match   htmlArg "\<\(data-[\-a-zA-Z0-9_]\+\)=" contained
+
+" fix javascript templates
+unlet b:current_syntax
+syn include @HTML $VIMRUNTIME/syntax/html.vim
+syn region htmlTemplate start=+<script [^>]*type *=[^>]*text/ng-template[^>]*>+ end=+</script>+me=s-1 keepend contains=@HTML,htmlScriptTag,@htmlPreproc
