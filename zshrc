@@ -27,10 +27,7 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 
-alias tml="tmux list-sessions"
-alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
-alias tmn="tmux new-session -s $1"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -78,3 +75,18 @@ function dcclean () { # clean docker container
 function diclean() { # clean docker images
   docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 }
+
+### TMUX functions
+function tacompl() {
+  reply=( $(tmux list-sessions) )
+}
+compctl -K tacompl ta
+
+function tc() { # new tmux session
+  cd ~/src/$1
+  tmux new-session -s "$1" -n vim -d 'vim'
+  tmux new-window -t "$1:2" -n "cmd"
+  tmux select-window -t "$1:1"
+  tmux -2 attach-session -t "$1"
+}
+compctl -K pcompl tc
