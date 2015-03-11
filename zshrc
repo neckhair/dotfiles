@@ -56,6 +56,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export MANAGEMENT_SERVER=phil
+export NINE_USER=phil
+
 
 # go to project
 function pcompl() {
