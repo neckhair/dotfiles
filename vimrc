@@ -35,7 +35,6 @@ Plugin 'parkr/vim-jekyll'
 
 Plugin 'ekalinin/Dockerfile.vim'
 
-Plugin 'mattn/emmet-vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
 
@@ -123,10 +122,12 @@ set textwidth=110
 set colorcolumn=+1
 set nowrap
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
 " disable automatic code folding for markdown plugin
 let g:vim_markdown_folding_disabled=1
 
-set guifont=Monaco:h14
+set guifont=Monaco\ for\ Powerline:h14
 
 " Strip trailing whitespace (,ss)
 fun! <SID>StripTrailingWhitespaces()
@@ -159,8 +160,13 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "Dispatch rspec {spec}"
 let g:rspec_runner = "os_x_iterm"
+
+if has('gui_running')
+  let g:rspec_command = "rspec {spec}"
+else
+  let g:rspec_command = "Dispatch rspec {spec}"
+endif
 
 " Syntastic Rubocop integration
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
