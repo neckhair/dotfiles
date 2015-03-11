@@ -1,6 +1,7 @@
 
 set shell=/bin/bash
 
+autocmd!
 set nocompatible
 filetype off
 
@@ -18,6 +19,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
+Plugin 'duggiefresh/vim-easydir'
 
 Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
@@ -68,6 +70,9 @@ set ttyfast
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
+" disable ex-mode
+nnoremap Q <nop>
+
 " enable line numbers
 set number
 set relativenumber
@@ -90,12 +95,19 @@ set expandtab
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
-" Highlight searches
-set hlsearch
-" Ignore case of searches
-set ignorecase
-" Highlight dynamically as pattern is typed
-set incsearch
+" automatically resize vim in command windows
+autocmd VimResized * :wincmd =
+
+" Searching
+set hlsearch    " Highlight searches
+set ignorecase  " Ignore case of searches
+set smartcase   " ... unless they contain at least one capital letter
+set incsearch   " Highlight dynamically as pattern is typed
+nnoremap <leader>h :noh<cr>
+
+set autoindent  " indent on enter
+set smartindent " do smart indenting when starting a new line
+set shiftround  " indent to the closest shiftwidth
 
 " Disable error bells
 set noerrorbells
@@ -122,7 +134,29 @@ set textwidth=110
 set colorcolumn=+1
 set nowrap
 
+set splitright                  " open vertical splits on the right
+set splitbelow                  " open the horizontal split below
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+" Use only 1 space after "." when joining lines instead of 2
+set nojoinspaces
+
+" Make those debugger statements painfully obvious
+au BufEnter *.rb syn match error contained "\<binding.pry\>"
+au BufEnter *.rb syn match error contained "\<debugger\>"
+
+set nobackup
+set noswapfile
+
+" Auto-reload buffers when files are changed on disk
+set autoread
+
+" Lines with equal indent form a fold.
+set foldmethod=indent
+set foldlevel=1
+set foldnestmax=10
+set nofoldenable    " Open all folds by default
 
 " disable automatic code folding for markdown plugin
 let g:vim_markdown_folding_disabled=1
@@ -151,9 +185,6 @@ nmap <silent> <C-N> :NERDTreeToggle<CR>
 
 " Search word under cursor in Dash
 nmap <silent> <C-D> <Plug>DashSearch
-
-" skip backup for temporary files (in particular crontab)
-set backupskip=/tmp/*,/private/tmp/*
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
