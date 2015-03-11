@@ -30,6 +30,8 @@ alias lh='ls -Alh'
 alias tmk="tmux kill-session -t $1"
 
 alias sourcetree='open -a SourceTree'
+alias rrg='rake routes | grep'
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
