@@ -35,7 +35,7 @@ alias rrg='rake routes | grep'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras osx rails bundler gem rvm brew vagrant tmuxinator tmux)
+plugins=(git git-extras osx rails bundler gem brew vagrant tmuxinator tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -52,11 +52,13 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 export MANAGEMENT_SERVER=phil
 export NINE_USER=phil
+export RBENV_ROOT=/usr/local/var/rbenv
+
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 
 # go to project
