@@ -75,7 +75,6 @@ nnoremap Q <nop>
 
 " enable line numbers
 set number
-set relativenumber
 set scrolloff=3
 set numberwidth=5
 
