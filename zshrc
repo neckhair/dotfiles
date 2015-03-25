@@ -72,6 +72,8 @@ compctl -K pcompl p
 
 eval `boot2docker shellinit 2>/dev/null`
 
+### Docker convenience
+alias dcp=docker-compose
 function dcclean () { # clean docker container
   docker rm $(docker ps -a -q)
 }
