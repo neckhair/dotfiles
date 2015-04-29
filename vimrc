@@ -41,6 +41,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
 
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -49,7 +50,7 @@ filetype plugin indent on
 let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors/)
-colorscheme jellybeans
+colorscheme solarized
 let g:rehash256 = 1
 
 " Use the OS clipboard by default
