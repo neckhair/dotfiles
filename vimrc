@@ -50,8 +50,8 @@ filetype plugin indent on
 let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors/)
-colorscheme solarized
-let g:rehash256 = 1
+set background=dark
+colorscheme smyck
 
 " Use the OS clipboard by default
 set clipboard=unnamed
