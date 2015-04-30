@@ -12,7 +12,7 @@
 [core]
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
   whitespace = space-before-tab,trailing-space
-	excludesfile = /Users/phil/.gitignore
+	excludesfile = /opt/boxen/config/git/gitignore
 	editor = vim
 
 [color]
@@ -51,3 +51,9 @@
 	trustExitCode = true
 [fetch]
 	prune = true
+
+[hub]
+protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
