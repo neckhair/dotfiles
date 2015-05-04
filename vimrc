@@ -40,7 +40,6 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
 
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
