@@ -157,6 +157,9 @@ set foldlevel=1
 set foldnestmax=10
 set nofoldenable    " Open all folds by default
 
+" Use ack instead of grep
+set grepprg=ack
+
 " disable automatic code folding for markdown plugin
 let g:vim_markdown_folding_disabled=1
 
