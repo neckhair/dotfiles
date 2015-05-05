@@ -163,7 +163,7 @@ set grepprg=ack
 " disable automatic code folding for markdown plugin
 let g:vim_markdown_folding_disabled=1
 
-set guifont=Monaco\ for\ Powerline:h14
+set guifont=Menlo\ for\ Powerline:h14
 
 " Strip trailing whitespace (,ss)
 fun! <SID>StripTrailingWhitespaces()
