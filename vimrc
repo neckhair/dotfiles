@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
 Plugin 'duggiefresh/vim-easydir'
+Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
@@ -196,19 +197,23 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm"
 
 if has('gui_running')
-  let g:rspec_command = "rspec {spec}"
+  let g:rspec_command = "bundle exec rspec {spec}"
 else
-  let g:rspec_command = "Dispatch rspec {spec}"
+  let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 endif
 
 " Syntastic Rubocop integration
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_ruby_checkers = ['mri']
 
 " Switch between splits C-j etc
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" screen splitting
+map <leader>s :sp<cr>
+map <leader>v :vs<cr>
 
 " airline settings
 " Download Font and use it in iTerm2:
