@@ -215,6 +215,12 @@ nnoremap <C-H> <C-W><C-H>
 map <leader>s :sp<cr>
 map <leader>v :vs<cr>
 
+" Emmet vim
+let g:user_emmet_leader_key='<C-Z>'
+
+" copy file path to clipboard
+noremap <Leader>f :let @+ = expand("%")<CR>
+
 " airline settings
 " Download Font and use it in iTerm2:
 " https://gist.github.com/baopham/1838072/raw/5fa73caa4af86285f11539a6b4b6c26cfca2c04b/Monaco%20for%20Powerline.otf
