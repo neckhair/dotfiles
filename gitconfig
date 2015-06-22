@@ -37,7 +37,7 @@
   log = true
 
 [push]
-  default = simple
+	default = current
 
 [user]
   name = Philippe Hässig
