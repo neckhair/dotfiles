@@ -43,6 +43,8 @@ Plugin 'tpope/vim-endwise'
 
 Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
+
 call vundle#end()
 filetype plugin indent on
 
