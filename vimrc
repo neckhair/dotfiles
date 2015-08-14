@@ -5,47 +5,46 @@ autocmd!
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'gmarik/Vundle.vim'
 
 " My Plugins here:
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'scrooloose/syntastic'
-Plugin 'duggiefresh/vim-easydir'
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-fugitive'
+Plug 'kchmck/vim-coffee-script'
+Plug 'scrooloose/syntastic'
+Plug 'duggiefresh/vim-easydir'
+Plug 'christoomey/vim-tmux-navigator'
 
-Plugin 'bling/vim-airline'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'tpope/vim-surround'
+Plug 'bling/vim-airline'
+Plug 'plasticboy/vim-markdown'
+Plug 'tpope/vim-surround'
 
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'rizzatti/dash.vim'
+Plug 'rizzatti/funcoo.vim'
+Plug 'rizzatti/dash.vim'
 
-Plugin 'rodjek/vim-puppet'
+Plug 'rodjek/vim-puppet'
 
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-dispatch'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-dispatch'
 
-Plugin 'parkr/vim-jekyll'
+Plug 'parkr/vim-jekyll'
 
-Plugin 'ekalinin/Dockerfile.vim'
+Plug 'ekalinin/Dockerfile.vim'
 
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-endwise'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-endwise'
 
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
-Plugin 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
+Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " set the leader
