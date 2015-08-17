@@ -28,8 +28,10 @@ Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 
 Plug 'tpope/vim-dispatch'
-Plug 'kassio/neoterm'
-Plug 'benekastah/neomake'
+if has('nvim')
+  Plug 'kassio/neoterm'
+  Plug 'benekastah/neomake'
+end
 
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
