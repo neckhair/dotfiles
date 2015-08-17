@@ -16,33 +16,28 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
-Plug 'kchmck/vim-coffee-script'
-Plug 'scrooloose/syntastic'
 Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'bling/vim-airline'
-Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-surround'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-endwise'
 
 Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 
-Plug 'rodjek/vim-puppet'
-
-Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-dispatch'
-
-Plug 'parkr/vim-jekyll'
+Plug 'kassio/neoterm'
+Plug 'benekastah/neomake'
 
 Plug 'ekalinin/Dockerfile.vim'
-
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-endwise'
+Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
+Plug 'rodjek/vim-puppet'
+Plug 'plasticboy/vim-markdown'
+Plug 'kchmck/vim-coffee-script'
 
 Plug 'altercation/vim-colors-solarized'
-
-Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
 
 call plug#end()
 filetype plugin indent on
@@ -52,7 +47,7 @@ let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors/)
 set background=dark
-colorscheme smyck
+colorscheme jellybeans
 
 " Use the OS clipboard by default
 set clipboard=unnamed
@@ -167,21 +162,24 @@ let g:vim_markdown_folding_disabled=1
 
 set guifont=Menlo\ for\ Powerline:h14
 
-" Strip trailing whitespace (,ss)
-fun! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
 " Automatic commands
 if has("autocmd")
   " Enable file type detection
   filetype on
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+
+  " Neomake
+  autocmd! BufWritePost * Neomake
+
+  " Strip trailing whitespace (,ss)
+  fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+  endfun
+  autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 endif
 
 " Toggle NerdTree
@@ -190,18 +188,24 @@ nmap <silent> <C-N> :NERDTreeToggle<CR>
 " Search word under cursor in Dash
 nmap <silent> <C-D> <Plug>DashSearch
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm"
+" Neoterm
+let g:neoterm_position = 'horizontal'
 
-if has('gui_running')
-  let g:rspec_command = "bundle exec rspec {spec}"
-else
-  let g:rspec_command = "Dispatch bundle exec rspec {spec}"
-endif
+nnoremap <silent> ,rt :call neoterm#test#run('all')<cr>
+nnoremap <silent> ,rf :call neoterm#test#run('file')<cr>
+nnoremap <silent> ,rn :call neoterm#test#run('current')<cr>
+nnoremap <silent> ,rr :call neoterm#test#rerun()<cr>
+" hide/close all terminals
+nnoremap <silent> ,th :call neoterm#close_all()<cr>
+" clear terminal
+nnoremap <silent> ,tl :call neoterm#clear()<cr>
+" kills the current job (send a <c-c>)
+nnoremap <silent> ,tc :call neoterm#kill()<cr>
+
+hi MyMsg ctermbg=0 ctermfg=0
+let g:neomake_error_sign = { 'text': '‼️', 'texthl': 'MyMsg', }
+let g:neomake_warning_sign = { 'text': '⚠️', 'texthl': 'MyMsg', }
+
 
 " Syntastic Rubocop integration
 let g:syntastic_ruby_checkers = ['mri']
