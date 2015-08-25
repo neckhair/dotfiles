@@ -171,8 +171,10 @@ if has("autocmd")
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 
-  " Neomake
-  autocmd! BufWritePost * Neomake
+  if has('nvim')
+    " Neomake
+    autocmd! BufWritePost * Neomake
+  endif
 
   " Strip trailing whitespace (,ss)
   fun! <SID>StripTrailingWhitespaces()
