@@ -18,6 +18,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
 Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'gorkunov/smartgf.vim'
 
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
@@ -47,7 +48,7 @@ filetype plugin indent on
 " set the leader
 let mapleader = ","
 
-" set colorscheme (in ~/.vim/colors/)
+" set colorscheme (in ~/.vim/colors)
 set background=dark
 colorscheme jellybeans
 
