@@ -1,0 +1,12 @@
+# ~/.tmuxinator/default.yml
+
+name: default
+root: .
+pre: git up
+
+windows:
+  - vim:
+      layout: 6186,272x62,0,0[272x45,0,0,0,272x16,0,46{136x16,0,46,2,135x16,137,46,5}]
+      panes:
+        - nvim
+        - # empty
