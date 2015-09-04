@@ -20,6 +20,8 @@ Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'gorkunov/smartgf.vim'
 
+Plug 'fatih/vim-go'
+
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
@@ -236,3 +238,13 @@ noremap <Leader>f :let @+ = expand("%")<CR>
 " https://gist.github.com/baopham/1838072/raw/5fa73caa4af86285f11539a6b4b6c26cfca2c04b/Monaco%20for%20Powerline.otf
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+" Go keymappings
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+
+autocmd FileType go nmap <Leader>ds <Plug>(go-def-split)
+autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
