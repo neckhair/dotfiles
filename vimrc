@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-ruby/vim-ruby'
 Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'gorkunov/smartgf.vim'
@@ -232,6 +233,12 @@ let g:user_emmet_leader_key='<C-Z>'
 
 " copy file path to clipboard
 noremap <Leader>f :let @+ = expand("%")<CR>
+
+" open alternative (rails spec)
+noremap <Leader>a :AV<CR>
+
+" close current window
+noremap <Leader>q :q<CR>
 
 " airline settings
 " Download Font and use it in iTerm2:
