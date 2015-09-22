@@ -2,7 +2,7 @@
 
 name: rails
 root: .
-pre: git up
+pre: git up && bundle install
 
 windows:
   - vim:
