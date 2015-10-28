@@ -27,6 +27,8 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
+Plug 'ervandew/supertab'
+Plug 'terryma/vim-multiple-cursors'
 
 Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
@@ -44,6 +46,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'flazz/vim-colorschemes'
 
 call plug#end()
 filetype plugin indent on
@@ -54,6 +57,8 @@ let mapleader = ","
 " set colorscheme (in ~/.vim/colors)
 set background=dark
 colorscheme jellybeans
+set linespace=2
+set antialias
 
 " Use the OS clipboard by default
 set clipboard=unnamed
@@ -246,7 +251,7 @@ noremap <Leader>q :q<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" Go keymappings
+" Go settings
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
