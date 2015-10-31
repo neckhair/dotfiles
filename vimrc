@@ -23,7 +23,7 @@ Plug 'gorkunov/smartgf.vim'
 
 Plug 'fatih/vim-go'
 
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
@@ -47,6 +47,7 @@ Plug 'kchmck/vim-coffee-script'
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'flazz/vim-colorschemes'
+Plug 'itchyny/landscape.vim'
 
 call plug#end()
 filetype plugin indent on
@@ -56,7 +57,7 @@ let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors)
 set background=dark
-colorscheme jellybeans
+colorscheme landscape
 set linespace=2
 set antialias
 
@@ -245,11 +246,14 @@ noremap <Leader>a :AV<CR>
 " close current window
 noremap <Leader>q :q<CR>
 
-" airline settings
-" Download Font and use it in iTerm2:
-" https://gist.github.com/baopham/1838072/raw/5fa73caa4af86285f11539a6b4b6c26cfca2c04b/Monaco%20for%20Powerline.otf
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" lightline settings
+let g:lightline = {
+      \ 'component': {
+      \   'readonly': '%{&readonly?"x":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
 
 " Go settings
 autocmd FileType go nmap <leader>r <Plug>(go-run)
