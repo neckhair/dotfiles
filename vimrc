@@ -28,7 +28,6 @@ Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
 Plug 'ervandew/supertab'
-Plug 'terryma/vim-multiple-cursors'
 
 Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
