@@ -46,7 +46,6 @@ Plug 'kchmck/vim-coffee-script'
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'flazz/vim-colorschemes'
-Plug 'itchyny/landscape.vim'
 
 call plug#end()
 filetype plugin indent on
@@ -56,7 +55,7 @@ let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors)
 set background=dark
-colorscheme landscape
+colorscheme jellybeans
 set linespace=2
 set antialias
 
@@ -228,6 +227,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" tab movement with H and L
+nnoremap H gT
+nnoremap L gt
 
 " screen splitting
 map <leader>s :sp<cr>
