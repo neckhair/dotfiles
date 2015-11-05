@@ -1,0 +1,25 @@
+# ~/.tmuxinator/cockpit.yml
+
+name: cockpit
+root: ~/src/cockpit
+pre:
+  - git up
+  - bundle install
+
+windows:
+  - vim:
+      layout: 6186,272x62,0,0[272x45,0,0,0,272x16,0,46{136x16,0,46,2,135x16,137,46,5}]
+      panes:
+        - nvim
+        - # nothing
+  - console:
+      panes:
+        - bundle exec rails c
+        - # empty
+  - server:
+    - foreman start
+  - dependencies:
+      panes:
+        - cd ~/src/urn-service && foreman start
+        - cd ~/src/pdns-api
+        - cd ~/src/swat

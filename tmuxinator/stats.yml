@@ -1,0 +1,18 @@
+# ~/.tmuxinator/stats.yml
+
+name: stats
+root: ~/src/stats-connector
+
+windows:
+  - stats:
+      root: ~/src/stats
+      panes:
+        - vagrant up
+  - stats-connector:
+      layout: 6186,272x62,0,0[272x45,0,0,0,272x16,0,46{136x16,0,46,2,135x16,137,46,5}]
+      panes:
+        - nvim
+        - git up
+  - foreman:
+    - sleep 10
+    - foreman start
