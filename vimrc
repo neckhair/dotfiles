@@ -201,22 +201,27 @@ nmap <silent> <C-N> :NERDTreeToggle<CR>
 nmap <silent> <C-D> <Plug>DashSearch
 
 " Neoterm
-let g:neoterm_position = 'horizontal'
+if has('nvim')
+  let g:neoterm_position = 'horizontal'
+  let g:neoterm_rspec_lib_cmd = 'rspec'
+  let g:neoterm_run_tests_bg = 1 " run tests in background
+  let g:neoterm_raise_when_tests_fail = 1
+  let g:neoterm_size = 15
+  let g:neoterm_test_status_format = '%s '
+  let g:neoterm_test_status = {'running': '🏃', 'success': '✅', 'failed': '❌'}
 
-nnoremap <silent> ,rt :call neoterm#test#run('all')<cr>
-nnoremap <silent> ,rf :call neoterm#test#run('file')<cr>
-nnoremap <silent> ,rn :call neoterm#test#run('current')<cr>
-nnoremap <silent> ,rr :call neoterm#test#rerun()<cr>
-" hide/close all terminals
-nnoremap <silent> ,th :call neoterm#close_all()<cr>
-" clear terminal
-nnoremap <silent> ,tl :call neoterm#clear()<cr>
-" kills the current job (send a <c-c>)
-nnoremap <silent> ,tc :call neoterm#kill()<cr>
+  nnoremap <silent> ,rt :call neoterm#test#run('all')<cr>
+  nnoremap <silent> ,rf :call neoterm#test#run('file')<cr>
+  nnoremap <silent> ,rn :call neoterm#test#run('current')<cr>
+  nnoremap <silent> ,rr :call neoterm#test#rerun()<cr>
 
-hi MyMsg ctermbg=0 ctermfg=0
-let g:neomake_error_sign = { 'text': '‼️', 'texthl': 'MyMsg', }
-let g:neomake_warning_sign = { 'text': '⚠️', 'texthl': 'MyMsg', }
+  " hide/close all terminals
+  nnoremap <silent> ,th :Tclose<cr>
+
+  hi MyMsg ctermbg=0 ctermfg=0
+  let g:neomake_error_sign = { 'text': '‼️', 'texthl': 'MyMsg', }
+  let g:neomake_warning_sign = { 'text': '⚠️', 'texthl': 'MyMsg', }
+endif
 
 
 " Syntastic Rubocop integration
@@ -250,12 +255,35 @@ noremap <Leader>q :q<CR>
 
 " lightline settings
 let g:lightline = {
+      \ 'active': {
+      \   'right': [ [ 'lineinfo' ], ['percent'], [ 'neoterm', 'fileformat', 'fileencoding', 'filetype' ] ],
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
       \ 'component': {
-      \   'readonly': '%{&readonly?"x":""}',
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_function': {
+      \   'neoterm': 'NeotermStatus',
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
+
+function! NeotermStatus()
+  if has('nvim')
+    return neoterm#test#status('running') . neoterm#test#status('success') . neoterm#test#status('failed')
+  else
+    return ''
+  end
+endfunction
 
 " Go settings
 autocmd FileType go nmap <leader>r <Plug>(go-run)
