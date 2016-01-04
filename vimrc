@@ -20,6 +20,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'gorkunov/smartgf.vim'
+Plug 'rking/ag.vim'
 
 Plug 'fatih/vim-go'
 
@@ -44,7 +45,6 @@ Plug 'rodjek/vim-puppet'
 Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
 
-Plug 'altercation/vim-colors-solarized'
 Plug 'flazz/vim-colorschemes'
 
 call plug#end()
@@ -178,6 +178,8 @@ if has("autocmd")
   filetype on
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  " Treat .cjsx files as .coffee
+  autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
 
   if has('nvim')
     " Neomake
@@ -246,6 +248,9 @@ let g:user_emmet_leader_key='<C-Z>'
 
 " copy file path to clipboard
 noremap <Leader>f :let @+ = expand("%")<CR>
+
+" insert binding.pry
+map <Leader>bp orequire'pry';binding.pry<esc>:w<cr>
 
 " open alternative (rails spec)
 noremap <Leader>a :AV<CR>
