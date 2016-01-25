@@ -21,6 +21,8 @@ Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'gorkunov/smartgf.vim'
 Plug 'rking/ag.vim'
+Plug 'danro/rename.vim'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'fatih/vim-go'
 
