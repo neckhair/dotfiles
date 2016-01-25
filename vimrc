@@ -57,7 +57,6 @@ let mapleader = ","
 set background=dark
 colorscheme jellybeans
 set linespace=2
-set antialias
 
 " Use the OS clipboard by default
 set clipboard=unnamed
@@ -257,6 +256,9 @@ noremap <Leader>a :AV<CR>
 
 " close current window
 noremap <Leader>q :q<CR>
+
+" save
+noremap <Leader>w :w<CR>
 
 " lightline settings
 let g:lightline = {
