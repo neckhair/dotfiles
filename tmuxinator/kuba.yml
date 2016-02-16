@@ -20,3 +20,6 @@ windows:
   - production:
       panes:
         - ssh kuba@kuba
+  - customer-client:
+      panes:
+        - cd ~/src/customer-client-ruby && git up && bundle install
