@@ -49,6 +49,8 @@ Plug 'kchmck/vim-coffee-script'
 
 Plug 'flazz/vim-colorschemes'
 
+Plug 'elixir-lang/vim-elixir'
+
 call plug#end()
 filetype plugin indent on
 
