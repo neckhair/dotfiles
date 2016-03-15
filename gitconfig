@@ -4,6 +4,8 @@
   s = status -s
   remotes = remote -v
   undopush = push -f origin HEAD^:master
+  pf = push --force-with-lease
+  squash = rebase -i --autosquash
 
 [apply]
   # Detect whitespace errors when applying a patch
