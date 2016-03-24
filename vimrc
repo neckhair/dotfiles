@@ -46,6 +46,7 @@ Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
 Plug 'rodjek/vim-puppet'
 Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
+Plug 'asciidoc/vim-asciidoc'
 
 Plug 'flazz/vim-colorschemes'
 
@@ -183,6 +184,8 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
   " Treat .cjsx files as .coffee
   autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
+
+  autocmd BufRead,BufNewFile *.asc set filetype=asciidoc
 
   if has('nvim')
     " Neomake
