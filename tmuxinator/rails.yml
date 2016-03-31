@@ -1,7 +1,7 @@
 # ~/.tmuxinator/rails.yml
 
-name: rails
-root: .
+name: <%= @args[0] %>
+root: ~/src/<%= @args[0] %>
 pre: git up && bundle install
 
 windows:
