@@ -24,6 +24,7 @@ Plug 'rking/ag.vim'
 Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'     " html tags auto close
+Plug 'mhinz/vim-startify'
 
 Plug 'fatih/vim-go'
 
