@@ -6,6 +6,7 @@
   undopush = push -f origin HEAD^:master
   pf = push --force-with-lease
   squash = rebase -i --autosquash
+  cb = rev-parse --abbrev-ref HEAD
 
 [apply]
   # Detect whitespace errors when applying a patch
