@@ -19,7 +19,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
 Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'gorkunov/smartgf.vim' " not working with colorscheme onedark
+Plug 'gorkunov/smartgf.vim' " not working with colorscheme onedark
 Plug 'rking/ag.vim'
 Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -49,6 +49,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'asciidoc/vim-asciidoc'
 
 Plug 'flazz/vim-colorschemes'
+Plug 'morhetz/gruvbox'
 
 Plug 'elixir-lang/vim-elixir'
 
@@ -59,7 +60,8 @@ filetype plugin indent on
 let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors)
-colorscheme onedark
+colorscheme gruvbox
+set background=dark
 set linespace=2
 
 " Use the OS clipboard by default
