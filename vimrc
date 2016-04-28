@@ -23,6 +23,7 @@ Plug 'gorkunov/smartgf.vim' " not working with colorscheme onedark
 Plug 'rking/ag.vim'
 Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'     " html tags auto close
 
 Plug 'fatih/vim-go'
 
@@ -267,6 +268,9 @@ noremap <Leader>q :q<CR>
 
 " save
 noremap <Leader>w :w<CR>
+
+" html autoclose file endings
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.html.erb"
 
 " lightline settings
 let g:lightline = {
