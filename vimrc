@@ -167,9 +167,10 @@ set autoread
 
 " Lines with equal indent form a fold.
 set foldmethod=indent
-set foldlevel=1
+set foldlevel=2
 set foldnestmax=10
 set nofoldenable    " Open all folds by default
+nnoremap <Space> za
 
 " Use ack instead of grep
 set grepprg=ack
