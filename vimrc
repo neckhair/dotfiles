@@ -11,19 +11,18 @@ Plug 'gmarik/Vundle.vim'
 " My Plugins here:
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', { 'branch': 'nvim' }
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'duggiefresh/vim-easydir'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'gorkunov/smartgf.vim' " not working with colorscheme onedark
+Plug 'gorkunov/smartgf.vim'
 Plug 'rking/ag.vim'
 Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'     " html tags auto close
-Plug 'mhinz/vim-startify'
 Plug 'mattn/emmet-vim'
 
 Plug 'fatih/vim-go'
