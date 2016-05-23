@@ -1,5 +1,4 @@
-
-set shell=/bin/bash
+set shell=/bin/zsh
 
 autocmd!
 set nocompatible
@@ -25,6 +24,7 @@ Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'     " html tags auto close
 Plug 'mhinz/vim-startify'
+Plug 'mattn/emmet-vim'
 
 Plug 'fatih/vim-go'
 
@@ -252,9 +252,6 @@ nnoremap L gt
 " screen splitting
 map <leader>s :sp<cr>
 map <leader>v :vs<cr>
-
-" Emmet vim
-let g:user_emmet_leader_key='<C-Z>'
 
 " copy file path to clipboard
 noremap <Leader>f :let @+ = expand("%")<CR>
