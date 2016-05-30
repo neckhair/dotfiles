@@ -94,9 +94,6 @@ set numberwidth=5
 " enable syntax highlighting
 syntax on
 
-" highlight current line
-set cursorline
-
 " Make tabs as wide as two spaces
 set tabstop=2
 set shiftwidth=2
