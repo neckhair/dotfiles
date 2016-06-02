@@ -80,9 +80,6 @@ set backspace=indent,eol,start
 " Optimize for fast terminal connections
 set ttyfast
 
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
-
 " disable ex-mode
 nnoremap Q <nop>
 
@@ -226,9 +223,10 @@ if has('nvim')
   " hide/close all terminals
   nnoremap <silent> ,th :Tclose<cr>
 
-  hi MyMsg ctermbg=0 ctermfg=0
-  let g:neomake_error_sign = { 'text': '‼️', 'texthl': 'MyMsg', }
-  let g:neomake_warning_sign = { 'text': '⚠️', 'texthl': 'MyMsg', }
+  :highlight NeomakeWarning ctermbg=0 ctermfg=214
+  :highlight NeomakeError ctermbg=0 ctermfg=196
+  let g:neomake_error_sign = { 'text': '!!', 'texthl': 'NeomakeError', }
+  let g:neomake_warning_sign = { 'text': 'W', 'texthl': 'NeomakeWarning', }
 endif
 
 
