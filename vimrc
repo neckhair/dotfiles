@@ -36,7 +36,6 @@ Plug 'ervandew/supertab'
 Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 
-Plug 'tpope/vim-dispatch'
 if has('nvim')
   Plug 'kassio/neoterm'
   Plug 'benekastah/neomake'
@@ -228,10 +227,6 @@ if has('nvim')
   let g:neomake_error_sign = { 'text': '!!', 'texthl': 'NeomakeError', }
   let g:neomake_warning_sign = { 'text': 'W', 'texthl': 'NeomakeWarning', }
 endif
-
-
-" Syntastic Rubocop integration
-let g:syntastic_ruby_checkers = ['mri']
 
 " Switch between splits C-j etc
 nnoremap <C-J> <C-W><C-J>
