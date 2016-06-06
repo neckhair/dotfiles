@@ -1,0 +1,35 @@
+# ~/.tmuxinator/tools.yml
+
+name: tools
+root: ~/src
+
+windows:
+  - urn-service:
+      layout: 452c,238x52,0,0[238x40,0,0,21,238x11,0,41{119x11,0,41,23,118x11,120,41,24}]
+      root: ~/src/urn-service
+      pre:
+      panes:
+        - nvim
+        - # empty
+        - git up && git checkout master && bundle install && foreman start
+  - swat:
+      layout: 452c,238x52,0,0[238x40,0,0,21,238x11,0,41{119x11,0,41,23,118x11,120,41,24}]
+      root: ~/src/swat
+      panes:
+        - nvim
+        - # emtpy
+        - git up && git checkout master && bundle install && foreman start
+  - pdns-api:
+      layout: 452c,238x52,0,0[238x40,0,0,21,238x11,0,41{119x11,0,41,23,118x11,120,41,24}]
+      root: ~/src/pdns-api
+      panes:
+        - nvim
+        - vagrant up
+        - git up && git checkout master && bundle install && foreman start
+  - eventus:
+      layout: 452c,238x52,0,0[238x40,0,0,21,238x11,0,41{119x11,0,41,23,118x11,120,41,24}]
+      root: ~/src/eventus
+      panes:
+        - nvim
+        - # empty
+        - git up && git checkout master && bundle install && foreman start

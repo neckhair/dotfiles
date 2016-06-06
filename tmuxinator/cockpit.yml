@@ -18,9 +18,3 @@ windows:
         - # empty
   - server:
     - foreman start
-  - dependencies:
-      panes:
-        - cd ~/src/urn-service && foreman start
-        - cd ~/src/pdns-api
-        - cd ~/src/swat
-        - cd ~/src/eventus
