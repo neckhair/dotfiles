@@ -70,3 +70,5 @@ helper = /opt/boxen/bin/boxen-git-credential
 	required = true
 [github]
 	user = neckhair
+[diff]
+	compactionHeuristic = true
