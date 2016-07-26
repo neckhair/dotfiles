@@ -24,8 +24,7 @@ Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'     " html tags auto close
 Plug 'mattn/emmet-vim'
-
-Plug 'fatih/vim-go'
+Plug 'janko-m/vim-test' " run tests in neovim
 
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
@@ -47,11 +46,12 @@ Plug 'rodjek/vim-puppet'
 Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
 Plug 'asciidoc/vim-asciidoc'
+Plug 'elixir-lang/vim-elixir'
+Plug 'fatih/vim-go'
 
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
 
-Plug 'elixir-lang/vim-elixir'
 
 call plug#end()
 filetype plugin indent on
@@ -207,17 +207,7 @@ nmap <silent> <C-D> <Plug>DashSearch
 " Neoterm
 if has('nvim')
   let g:neoterm_position = 'horizontal'
-  let g:neoterm_rspec_lib_cmd = 'rspec'
-  let g:neoterm_run_tests_bg = 1 " run tests in background
-  let g:neoterm_raise_when_tests_fail = 1
   let g:neoterm_size = 15
-  let g:neoterm_test_status_format = '%s '
-  let g:neoterm_test_status = {'running': '🏃', 'success': '✅', 'failed': '❌'}
-
-  nnoremap <silent> ,rt :call neoterm#test#run('all')<cr>
-  nnoremap <silent> ,rf :call neoterm#test#run('file')<cr>
-  nnoremap <silent> ,rn :call neoterm#test#run('current')<cr>
-  nnoremap <silent> ,rr :call neoterm#test#rerun()<cr>
 
   " hide/close all terminals
   nnoremap <silent> ,th :Tclose<cr>
@@ -226,6 +216,14 @@ if has('nvim')
   :highlight NeomakeError ctermbg=0 ctermfg=196
   let g:neomake_error_sign = { 'text': '!!', 'texthl': 'NeomakeError', }
   let g:neomake_warning_sign = { 'text': 'W', 'texthl': 'NeomakeWarning', }
+endif
+
+" vim-test setup
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>l :TestLast<CR>
+if has('nvim')
+  let test#strategy = "neoterm"
 endif
 
 " Switch between splits C-j etc
