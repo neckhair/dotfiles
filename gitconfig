@@ -1,6 +1,6 @@
 [alias]
   co = checkout
-  l = log --pretty=oneline -n 20 --graph
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   s = status -s
   remotes = remote -v
   undopush = push -f origin HEAD^:master
