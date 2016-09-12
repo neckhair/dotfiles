@@ -313,3 +313,14 @@ autocmd FileType go nmap <leader>c <Plug>(go-coverage)
 autocmd FileType go nmap <Leader>ds <Plug>(go-def-split)
 autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+" Replace ruby hash rockets with :Hashrockets
+function! s:hashrockets() range
+  let lnum = a:firstline
+  while lnum <= a:lastline
+    let newline = substitute(getline(lnum), ':\(\w\+\)\s*=>', '\1:', 'g')
+    call setline(lnum, newline)
+    let lnum += 1
+  endwhile
+endfunction
+command! -range Hashrockets :<line1>,<line2>call s:hashrockets()
