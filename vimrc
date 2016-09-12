@@ -211,6 +211,8 @@ if has('nvim')
 
   " hide/close all terminals
   nnoremap <silent> ,th :Tclose<cr>
+  " map escape to exit terminal
+  tnoremap <Esc> <C-\><C-n>
 
   :highlight NeomakeWarning ctermbg=0 ctermfg=214
   :highlight NeomakeError ctermbg=0 ctermfg=196
