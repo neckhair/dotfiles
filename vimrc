@@ -180,8 +180,8 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
   " Treat .cjsx files as .coffee
   autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
-
   autocmd BufRead,BufNewFile *.asc set filetype=asciidoc
+  autocmd BufNewFile,BufRead *.jbuilder setfiletype ruby syntax=ruby
 
   if has('nvim')
     " Neomake
