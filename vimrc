@@ -43,15 +43,16 @@ end
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
 Plug 'rodjek/vim-puppet'
-Plug 'plasticboy/vim-markdown'
 Plug 'kchmck/vim-coffee-script'
-Plug 'asciidoc/vim-asciidoc'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 
+Plug 'reedes/vim-pencil'
+Plug 'asciidoc/vim-asciidoc'
+Plug 'tpope/vim-markdown'
+
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
-
 
 call plug#end()
 filetype plugin indent on
@@ -167,8 +168,12 @@ nnoremap <Space> za
 " Use ack instead of grep
 set grepprg=ack
 
-" disable automatic code folding for markdown plugin
-let g:vim_markdown_folding_disabled=1
+" pencil for prose files (markdown, text)
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd,md call pencil#init({'wrap': 'soft'})
+  autocmd FileType text            call pencil#init({'wrap': 'soft'})
+augroup END
 
 set guifont=Menlo\ for\ Powerline:h14
 
@@ -176,10 +181,8 @@ set guifont=Menlo\ for\ Powerline:h14
 if has("autocmd")
   " Enable file type detection
   filetype on
-  " Treat .json files as .js
-  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-  " Treat .cjsx files as .coffee
-  autocmd BufRead,BufNewFile *.cjsx set filetype=coffee
+  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript " Treat .json files as .js
+  autocmd BufRead,BufNewFile *.cjsx set filetype=coffee " Treat .cjsx files as .coffee
   autocmd BufRead,BufNewFile *.asc set filetype=asciidoc
   autocmd BufNewFile,BufRead *.jbuilder setfiletype ruby syntax=ruby
 
