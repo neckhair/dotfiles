@@ -56,6 +56,12 @@ Plug 'tpope/vim-markdown'
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
 
+" Snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
 call plug#end()
 filetype plugin indent on
 
