@@ -8,12 +8,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim'
 
-" My Plugins here:
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter', { 'branch': 'nvim' }
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'duggiefresh/vim-easydir'
@@ -23,34 +20,39 @@ Plug 'rking/ag.vim'
 Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'     " html tags auto close
-Plug 'mattn/emmet-vim'
 Plug 'janko-m/vim-test' " run tests in neovim
-
+Plug 'tomtom/tcomment_vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
-Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
-Plug 'ervandew/supertab'
 
+" Dash integration
 Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 
+" Neovim stuff
 if has('nvim')
   Plug 'kassio/neoterm'
   Plug 'benekastah/neomake'
 end
 
+" Language plugins
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
-Plug 'rodjek/vim-puppet'
-Plug 'kchmck/vim-coffee-script'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mattn/emmet-vim'
+Plug 'rodjek/vim-puppet'
+Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
 
-Plug 'reedes/vim-pencil'
+" Prosa and Markdown
 Plug 'asciidoc/vim-asciidoc'
+Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-markdown'
 
+" Colors
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
 
