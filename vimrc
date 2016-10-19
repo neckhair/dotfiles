@@ -52,7 +52,7 @@ Plug 'asciidoc/vim-asciidoc'
 Plug 'tpope/vim-markdown'
 
 Plug 'flazz/vim-colorschemes'
-Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
 
 call plug#end()
 filetype plugin indent on
@@ -61,8 +61,11 @@ filetype plugin indent on
 let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors)
-colorscheme gruvbox
 set background=dark
+let g:molokai_original=1
+let g:rehash256=1
+set t_Co=256
+colorscheme molokai
 set linespace=2
 
 " Use the OS clipboard by default
