@@ -17,3 +17,5 @@ mas 'You Need a Budget 4', id: 614680722
 mas 'iPhoto',              id: 408981381
 
 cask 'Dash'
+
+brew 'watch'
