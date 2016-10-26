@@ -25,6 +25,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
+Plug 'ervandew/supertab'
 
 " Dash integration
 Plug 'rizzatti/funcoo.vim'
