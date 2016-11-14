@@ -48,6 +48,8 @@ Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 Plug 'lepture/vim-jinja'
+Plug 'mxw/vim-jsx'
+Plug 'vim-scripts/groovy.vim'
 
 " Prosa and Markdown
 Plug 'asciidoc/vim-asciidoc'
@@ -199,6 +201,7 @@ if has("autocmd")
   autocmd BufRead,BufNewFile *.asc set filetype=asciidoc
   autocmd BufNewFile,BufRead *.jbuilder setfiletype ruby syntax=ruby
   autocmd BufNewFile,BufRead *.j2 set ft=jinja
+  autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy syntax=groovy
 
   if has('nvim')
     " Neomake
