@@ -1,3 +1,5 @@
+# vim: set ft=ruby:
+
 cask_args appdir: '/Applications'
 
 mas '1Password',           id: 443987910
@@ -16,6 +18,63 @@ mas 'Xcode',               id: 497799835
 mas 'You Need a Budget 4', id: 614680722
 mas 'iPhoto',              id: 408981381
 
-cask 'Dash'
+cask 'aerial'
+cask 'alfred'
+cask 'dash'
+cask 'dropbox'
+cask 'firefox'
+cask 'google-chrome'
+cask 'gpgtools'
+cask 'iterm2'
+cask 'java'
+cask 'libreoffice'
+cask 'mou'
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'sequel-pro'
+cask 'slack'
+cask 'sourcetree'
+cask 'spotify'
+cask 'the-unarchiver'
+cask 'tunnelblick'
+cask 'vagrant'
+cask 'whatsapp'
 
+brew 'ansible'
+brew 'ctags'
+brew 'docker'
+brew 'exercism'
+brew 'git'
+brew 'gnu-tar'
+brew 'go'
+brew 'htop'
+brew 'httpie'
+brew 'hub'
+brew 'keybase'
+brew 'macvim'
+brew 'mas'
+brew 'mtr'
+brew 'pstree'
+brew 'pwgen'
+brew 'ssh-copy-id'
+brew 'the_silver_searcher'
+brew 'tmux'
 brew 'watch'
+brew 'wget'
+
+# Nine
+if Socket.gethostname == 'odin'
+  cask 'paw'
+  cask 'pgadmin3'
+
+  brew 'openshift-cli'
+end
+
+# Home
+if Socket.gethostname == 'thor'
+  cask 'flux'
+  cask 'sonos'
+  cask 'steam'
+  cask 'utorrent'
+  cask 'vlc'
+end
