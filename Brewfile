@@ -22,6 +22,7 @@ mas 'iPhoto',              id: 408981381
 cask 'aerial'
 cask 'alfred'
 cask 'dash'
+cask 'docker'
 cask 'dropbox'
 cask 'firefox'
 cask 'google-chrome'
