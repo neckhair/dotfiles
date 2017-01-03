@@ -38,6 +38,7 @@ cask 'spotify'
 cask 'the-unarchiver'
 cask 'tunnelblick'
 cask 'vagrant'
+cask 'virtualbox'
 cask 'whatsapp'
 
 brew 'ansible'
