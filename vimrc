@@ -77,7 +77,7 @@ set background=dark
 let g:molokai_original=1
 let g:rehash256=1
 set t_Co=256
-colorscheme molokai
+colorscheme sexy-railscasts-256
 set linespace=2
 
 " Use the OS clipboard by default
