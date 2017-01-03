@@ -11,6 +11,7 @@ mas 'Pages',               id: 409201541
 mas 'Parcel',              id: 639968404
 mas 'Pixelmator',          id: 407963104
 mas 'Pocket',              id: 568494494
+mas 'Reeder',              id: 880001334
 mas 'Skitch',              id: 425955336
 mas 'Tweetbot',            id: 557168941
 mas 'Wunderlist',          id: 410628904
@@ -55,6 +56,7 @@ brew 'keybase'
 brew 'macvim'
 brew 'mas'
 brew 'mtr'
+brew 'neovim/neovim/neovim'
 brew 'pstree'
 brew 'pwgen'
 brew 'ssh-copy-id'
@@ -66,8 +68,6 @@ brew 'wget'
 # Nine
 if Socket.gethostname == 'odin'
   cask 'paw'
-  cask 'pgadmin3'
-
   brew 'openshift-cli'
 end
 
