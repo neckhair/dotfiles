@@ -72,5 +72,3 @@ helper = /opt/boxen/bin/boxen-git-credential
 	user = neckhair
 [diff]
 	compactionHeuristic = true
-[commit]
-	gpgsign = true
