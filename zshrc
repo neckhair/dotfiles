@@ -81,6 +81,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias vimconfig="vim ~/.vimrc"
+alias zshconfig="nvim ~/.zshrc"
+alias vimconfig="nvim ~/.vimrc"
 alias vim="nvim"
