@@ -13,6 +13,7 @@ mas 'Pixelmator',          id: 407963104
 mas 'Pocket',              id: 568494494
 mas 'Reeder',              id: 880001334
 mas 'Skitch',              id: 425955336
+mas 'Spark',               id: 1176895641
 mas 'Tweetbot',            id: 557168941
 mas 'Wunderlist',          id: 410628904
 mas 'Xcode',               id: 497799835
