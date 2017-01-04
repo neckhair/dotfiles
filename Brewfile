@@ -65,13 +65,13 @@ brew 'watch'
 brew 'wget'
 
 # Nine
-if Socket.gethostname == 'odin'
+if Socket.gethostname == 'odin.local'
   cask 'paw'
   brew 'openshift-cli'
 end
 
 # Home
-if Socket.gethostname == 'thor'
+if Socket.gethostname == 'thor.local'
   cask 'flux'
   cask 'sonos'
   cask 'steam'
