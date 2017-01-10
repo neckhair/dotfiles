@@ -59,6 +59,7 @@ brew 'mas'
 brew 'mtr'
 brew 'pstree'
 brew 'pwgen'
+brew 'reattach-to-user-namespace' # for tmux
 brew 'ssh-copy-id'
 brew 'the_silver_searcher'
 brew 'tmux'
