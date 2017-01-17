@@ -57,6 +57,7 @@ brew 'keybase'
 brew 'macvim'
 brew 'mas'
 brew 'mtr'
+brew 'npm'
 brew 'pstree'
 brew 'pwgen'
 brew 'reattach-to-user-namespace' # for tmux
@@ -70,6 +71,7 @@ brew 'wget'
 if Socket.gethostname == 'odin.local'
   cask 'paw'
   brew 'openshift-cli'
+  brew 'freetds' # for kuba
 end
 
 # Home
