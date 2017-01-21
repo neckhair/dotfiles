@@ -20,6 +20,7 @@ mas 'Xcode',               id: 497799835
 mas 'You Need a Budget 4', id: 614680722
 mas 'iPhoto',              id: 408981381
 
+cask 'Dash'
 cask 'aerial'
 cask 'alfred'
 cask 'dash'
@@ -32,6 +33,7 @@ cask 'iterm2'
 cask 'java'
 cask 'libreoffice'
 cask 'qlcolorcode'
+cask 'qlmarkdown'
 cask 'qlmarkdown'
 cask 'sequel-pro'
 cask 'slack'
@@ -50,6 +52,7 @@ brew 'exercism'
 brew 'git'
 brew 'gnu-tar'
 brew 'go'
+brew 'htop'
 brew 'htop'
 brew 'httpie'
 brew 'hub'
