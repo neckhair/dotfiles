@@ -74,7 +74,6 @@ let mapleader = ","
 
 " set colorscheme (in ~/.vim/colors)
 set background=dark
-let g:molokai_original=1
 let g:rehash256=1
 set t_Co=256
 colorscheme sexy-railscasts-256
@@ -327,6 +326,7 @@ endfunction
 " Go settings
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>i <Plug>(go-install)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>c <Plug>(go-coverage)
 
