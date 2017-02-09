@@ -499,7 +499,7 @@ Style/MultilineOperationIndentation:
     - indented
 
 Style/MultilineMethodCallIndentation:
-  EnforcedStyle: aligned
+  EnforcedStyle: indented
 
 Style/NumericLiterals:
   Enabled: false
