@@ -20,7 +20,7 @@ mas 'Xcode',               id: 497799835
 mas 'You Need a Budget 4', id: 614680722
 mas 'iPhoto',              id: 408981381
 
-cask 'Dash'
+brew 'Caskroom/versions/dash3'
 cask 'aerial'
 cask 'alfred'
 cask 'dash'
@@ -32,6 +32,7 @@ cask 'hazel'
 cask 'iterm2'
 cask 'java'
 cask 'libreoffice'
+cask 'macvim'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlmarkdown'
@@ -47,17 +48,13 @@ cask 'whatsapp'
 
 brew 'ansible'
 brew 'ctags'
-brew 'docker'
 brew 'exercism'
 brew 'git'
 brew 'gnu-tar'
 brew 'go'
 brew 'htop'
-brew 'htop'
 brew 'httpie'
 brew 'hub'
-brew 'keybase'
-brew 'macvim'
 brew 'mas'
 brew 'mtr'
 brew 'npm'
@@ -78,10 +75,9 @@ if Socket.gethostname == 'odin.local'
 end
 
 # Home
-if Socket.gethostname == 'thor.local'
+if Socket.gethostname != 'odin.local'
   cask 'flux'
   cask 'sonos'
   cask 'steam'
-  cask 'utorrent'
   cask 'vlc'
 end
