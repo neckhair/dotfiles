@@ -304,7 +304,6 @@ let g:lightline = {
       \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
       \ },
       \ 'component_function': {
-      \   'neoterm': 'NeotermStatus',
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
@@ -314,14 +313,6 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
-
-function! NeotermStatus()
-  if has('nvim')
-    return neoterm#test#status('running') . neoterm#test#status('success') . neoterm#test#status('failed')
-  else
-    return ''
-  end
-endfunction
 
 " Go settings
 autocmd FileType go nmap <leader>r <Plug>(go-run)
