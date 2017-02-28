@@ -20,7 +20,6 @@ mas 'Xcode',               id: 497799835
 mas 'You Need a Budget 4', id: 614680722
 mas 'iPhoto',              id: 408981381
 
-brew 'Caskroom/versions/dash3'
 cask 'aerial'
 cask 'alfred'
 cask 'dash'
