@@ -88,3 +88,6 @@ if [ -f ~/$TERM.ti ]; then
 else
   echo "No ~/$TERM.ti file found."
 fi
+
+export GOPATH=~/src/go
+export PATH=$PATH:$(go env GOPATH)/bin
