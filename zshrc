@@ -82,3 +82,9 @@ alias vimconfig="nvim ~/.vimrc"
 alias vim="nvim"
 
 fpath=(${HOMEBREW_PREFIX}/share/zsh-completions $fpath)
+
+if [ -f ~/$TERM.ti ]; then
+  tic ~/$TERM.ti
+else
+  echo "No ~/$TERM.ti file found."
+fi
