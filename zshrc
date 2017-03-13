@@ -80,6 +80,7 @@ export EDITOR='nvim'
 alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vimrc"
 alias vim="nvim"
+alias dc="docker-compose"
 
 fpath=(${HOMEBREW_PREFIX}/share/zsh-completions $fpath)
 
