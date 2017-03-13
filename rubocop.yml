@@ -825,8 +825,11 @@ Rails/FindEach:
   Include:
     - app/models/**/*.rb
 
+Rails/HttpPositionalArguments:
+  Enabled: false
+
 Rails/HasAndBelongsToMany:
-  enabled: false
+  Enabled: false
   Include:
     - app/models/**/*.rb
 
