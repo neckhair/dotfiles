@@ -22,7 +22,6 @@ mas 'iPhoto',              id: 408981381
 
 cask 'aerial'
 cask 'alfred'
-cask 'dash'
 cask 'docker'
 cask 'dropbox'
 cask 'firefox'
@@ -47,6 +46,7 @@ cask 'whatsapp'
 
 brew 'ansible'
 brew 'ctags'
+cask 'deluge' # Bittorrent
 brew 'exercism'
 brew 'git'
 brew 'gnu-tar'
