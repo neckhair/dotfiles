@@ -50,6 +50,7 @@ Plug 'tpope/vim-rails'
 Plug 'lepture/vim-jinja'
 Plug 'mxw/vim-jsx'
 Plug 'vim-scripts/groovy.vim'
+Plug 'cespare/vim-toml'
 
 " Prosa and Markdown
 Plug 'asciidoc/vim-asciidoc'
@@ -189,7 +190,7 @@ augroup pencil
   autocmd FileType text            call pencil#init({'wrap': 'soft'})
 augroup END
 
-set guifont=Menlo\ for\ Powerline:h14
+set guifont=Menlo:h16
 
 " Automatic commands
 if has("autocmd")
