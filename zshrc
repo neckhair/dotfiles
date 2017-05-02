@@ -95,3 +95,8 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 # added by travis gem
 [ -f /Users/phil/.travis/travis.sh ] && source /Users/phil/.travis/travis.sh
+
+function nclone() {
+  git clone git@github.com:ninech/$1 ~/src/$1
+  cd ~/src/$1
+}
