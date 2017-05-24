@@ -715,6 +715,10 @@ Metrics/AbcSize:
   # a Float.
   Max: 15
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+
 Metrics/BlockNesting:
   Max: 3
 
