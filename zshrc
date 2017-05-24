@@ -81,6 +81,8 @@ alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vimrc"
 alias vim="nvim"
 alias dc="docker-compose"
+alias dcrspec="docker-compose exec spring bin/rspec"
+alias dcbi="docker-compose run --no-deps app bundle install"
 
 fpath=(${HOMEBREW_PREFIX}/share/zsh-completions $fpath)
 
