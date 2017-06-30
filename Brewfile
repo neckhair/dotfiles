@@ -70,12 +70,13 @@ brew 'wget'
 if Socket.gethostname == 'odin.local'
   cask 'paw'
   brew 'openshift-cli'
-  brew 'freetds' # for kuba
 end
 
 # Home
 if Socket.gethostname != 'odin.local'
+  cask 'arq'
   cask 'flux'
+  cask 'gog-galaxy'
   cask 'sonos'
   cask 'steam'
   cask 'vlc'
