@@ -66,6 +66,10 @@ brew 'tmux'
 brew 'watch'
 brew 'wget'
 
+# Nerdfonts
+tap 'caskroom/fonts'
+cask 'font-droidsansmono-nerd-font'
+
 # Nine
 if Socket.gethostname == 'odin.local'
   cask 'paw'
