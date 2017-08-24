@@ -102,3 +102,8 @@ function nclone() {
   git clone git@github.com:ninech/$1 ~/src/$1
   cd ~/src/$1
 }
+
+# Openshift Shell completion
+if which oc; then
+  source <(oc completion zsh)
+fi
