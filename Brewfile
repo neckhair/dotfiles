@@ -15,7 +15,6 @@ mas 'Reeder',              id: 880001334
 mas 'Skitch',              id: 425955336
 mas 'Spark',               id: 1176895641
 mas 'Tweetbot',            id: 557168941
-mas 'Wunderlist',          id: 410628904
 mas 'Xcode',               id: 497799835
 mas 'You Need a Budget 4', id: 614680722
 mas 'iPhoto',              id: 408981381
@@ -65,6 +64,11 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'watch'
 brew 'wget'
+
+brew 'bundler-completion'
+brew 'docker-completion'
+brew 'docker-compose-completion'
+brew 'launchctl-completion'
 
 # Nerdfonts
 tap 'caskroom/fonts'
