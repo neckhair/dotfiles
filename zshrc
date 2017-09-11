@@ -103,7 +103,9 @@ function nclone() {
   cd ~/src/$1
 }
 
+export TF_VAR_nine_mnt_ssh_user=phil
+
 # Openshift Shell completion
-if which oc; then
+if which oc > /dev/null; then
   source <(oc completion zsh)
 fi
