@@ -1,5 +1,6 @@
 # Common configuration.
 AllCops:
+  TargetRubyVersion: 2.4
   # By default, the rails cops are not run. Override in project or home
   # directory .rubocop.yml files, or by giving the -R/--rails option.
   # Cop names are not displayed in offense messages by default. Change behavior
@@ -348,7 +349,7 @@ Layout/EmptyLinesAroundModuleBody:
 # AutoCorrectEncodingComment must match the regex
 # /#.*coding\s?[:=]\s?(?:UTF|utf)-8/
 Style/Encoding:
-  EnforcedStyle: always
+  EnforcedStyle: when_needed
   SupportedStyles:
     - when_needed
     - always
