@@ -361,7 +361,7 @@ Layout/ExtraSpacing:
   # lines.
   AllowForAlignment: true
 
-Style/FileName:
+Naming/FileName:
   # File names listed in AllCops:Include are excluded by default. Add extra
   # excludes here.
   Exclude: []
@@ -483,7 +483,7 @@ Style/MethodDefParentheses:
     - require_parentheses
     - require_no_parentheses
 
-Style/MethodName:
+Naming/MethodName:
   EnforcedStyle: snake_case
   SupportedStyles:
     - snake_case
@@ -524,7 +524,7 @@ Style/PercentQLiterals:
     - lower_case_q # Use %q when possible, %Q when necessary
     - upper_case_q # Always use %Q
 
-Style/PredicateName:
+Naming/PredicateName:
   # Predicate name prefices.
   NamePrefix:
     - is_
@@ -696,7 +696,7 @@ Style/TrivialAccessors:
     - to_s
     - to_sym
 
-Style/VariableName:
+Naming/VariableName:
   EnforcedStyle: snake_case
   SupportedStyles:
     - snake_case
