@@ -18,6 +18,7 @@ mas 'Tweetbot',            id: 557168941
 mas 'Xcode',               id: 497799835
 mas 'You Need a Budget 4', id: 614680722
 mas 'iPhoto',              id: 408981381
+mas 'Next Meeting',        id: 1017470484
 
 cask 'aerial'
 cask 'alfred'
