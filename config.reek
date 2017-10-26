@@ -23,7 +23,7 @@ DuplicateMethodCall:
   max_calls: 2
   allow_calls: []
 FeatureEnvy:
-  enabled: true
+  enabled: false
   exclude: []
 IrresponsibleModule:
   enabled: false
@@ -49,7 +49,7 @@ NestedIterators:
   ignore_iterators:
   - tap
 NilCheck:
-  enabled: true
+  enabled: false
   exclude: []
 PrimaDonnaMethod:
   enabled: true
