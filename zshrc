@@ -81,6 +81,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vimrc"
 alias vim="nvim"
 alias dc="docker-compose"
+alias dct="docker-compose -f docker-compose.test.yml"
 alias dcrspec="docker-compose exec spring bin/rspec"
 alias dcbi="docker-compose run --no-deps app bundle install"
 
