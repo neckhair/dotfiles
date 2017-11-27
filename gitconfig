@@ -71,3 +71,7 @@ protocol = git
 	user = neckhair
 [diff]
 	compactionHeuristic = true
+[commit]
+	gpgsign = true
+[url "git@gitlab.nine.ch:"]
+	insteadOf = https://gitlab.nine.ch/
