@@ -100,7 +100,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 [ -f /Users/phil/.travis/travis.sh ] && source /Users/phil/.travis/travis.sh
 
 function nclone() {
-  git clone git@github.com:ninech/$1 ~/src/$1
+  git clone git@gitlab.nine.ch:ninech/$1 ~/src/$1
   cd ~/src/$1
 }
 
