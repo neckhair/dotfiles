@@ -51,6 +51,7 @@ Plug 'lepture/vim-jinja'
 Plug 'mxw/vim-jsx'
 Plug 'vim-scripts/groovy.vim'
 Plug 'cespare/vim-toml'
+Plug 'dag/vim-fish'
 
 " Prosa and Markdown
 Plug 'asciidoc/vim-asciidoc'
