@@ -1,6 +1,4 @@
-set EDITOR nvim
-
-set --universal -x GOPATH $HOME/src/go
-set PATH $GOPATH/bin $PATH
+source variables.fish
+source aliases.fish
 
 status --is-interactive; and source (rbenv init -|psub)
