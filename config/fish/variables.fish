@@ -1,5 +1,5 @@
 
 set EDITOR nvim
 
-set GOPATH $HOME/src/go
-set PATH $GOPATH/bin $PATH
+set -x GOPATH $HOME/src/go
+set -x PATH $GOPATH/bin $PATH
