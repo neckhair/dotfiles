@@ -44,8 +44,8 @@
 	default = current
 
 [user]
-  name = Philippe Hässig
-  email = phil@nine.ch
+	name = Philippe Hässig
+	email = phil@nine.ch
   signingkey = 57338A09DD84E473
 
 [difftool "sourcetree"]
@@ -65,9 +65,10 @@ protocol = git
 	smudge = git hawser smudge %f
 	required = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [github]
 	user = neckhair
 [diff]
