@@ -3,25 +3,25 @@
 cask_args appdir: '/Applications'
 
 mas '1Password',           id: 443987910
-mas 'Deckset',             id: 847496013
-mas 'Keynote',             id: 409183694
-mas 'Numbers',             id: 409203825
+mas 'Bear',                id: 1091189122
+mas 'Irvue',               id: 1039633667
+mas 'Omnifocus',           id: 867299399
 mas 'PDF Expert',          id: 1055273043
-mas 'Pages',               id: 409201541
 mas 'Parcel',              id: 639968404
 mas 'Pixelmator',          id: 407963104
 mas 'Pocket',              id: 568494494
 mas 'Reeder',              id: 880001334
+mas 'SleepTime',           id: 465772885
 mas 'Skitch',              id: 425955336
 mas 'Spark',               id: 1176895641
 mas 'Tweetbot',            id: 557168941
 mas 'Xcode',               id: 497799835
 mas 'You Need a Budget 4', id: 614680722
-mas 'iPhoto',              id: 408981381
 mas 'Next Meeting',        id: 1017470484
 
 cask 'aerial'
 cask 'alfred'
+cask 'bitbar'
 cask 'docker'
 cask 'dropbox'
 cask 'firefox'
@@ -33,20 +33,18 @@ cask 'libreoffice'
 cask 'macvim'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
-cask 'qlmarkdown'
 cask 'sequel-pro'
 cask 'slack'
-cask 'sourcetree'
 cask 'spotify'
 cask 'the-unarchiver'
 cask 'tunnelblick'
 cask 'vagrant'
 cask 'virtualbox'
+cask 'visual-studio-code'
 cask 'whatsapp'
 
 brew 'ansible'
 brew 'ctags'
-cask 'deluge' # Bittorrent
 brew 'exercism'
 brew 'git'
 brew 'gnu-tar'
@@ -57,6 +55,7 @@ brew 'hub'
 brew 'mas'
 brew 'mtr'
 brew 'npm'
+brew 'openshift-cli'
 brew 'pstree'
 brew 'pwgen'
 brew 'reattach-to-user-namespace' # for tmux
@@ -77,8 +76,6 @@ cask 'font-droidsansmono-nerd-font'
 
 # Nine
 if Socket.gethostname == 'odin.local'
-  cask 'paw'
-  brew 'openshift-cli'
 end
 
 # Home
