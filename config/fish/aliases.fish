@@ -6,3 +6,5 @@ alias be "bundle exec"
 
 alias got "go test"
 alias gor "go run"
+
+alias av "ansible-vault --vault-password-file=.vault"
