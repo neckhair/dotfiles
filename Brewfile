@@ -70,9 +70,10 @@ brew 'docker-completion'
 brew 'docker-compose-completion'
 brew 'launchctl-completion'
 
-# Nerdfonts
+# Fonts
 tap 'caskroom/fonts'
 cask 'font-droidsansmono-nerd-font'
+cask 'font-fira-code'
 
 # Nine
 if Socket.gethostname == 'odin.local'
@@ -81,9 +82,7 @@ end
 # Home
 if Socket.gethostname != 'odin.local'
   cask 'arq'
-  cask 'flux'
   cask 'gog-galaxy'
-  cask 'sonos'
   cask 'steam'
   cask 'vlc'
 end
