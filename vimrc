@@ -61,7 +61,6 @@ Plug 'tpope/vim-markdown'
 " Colors
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
-Plug 'ryanoasis/vim-devicons'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -150,7 +149,7 @@ set title
 " Always show the statusline
 set laststatus=2
 
-set textwidth=120
+set textwidth=110
 set colorcolumn=+1
 set nowrap
 
