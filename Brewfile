@@ -48,10 +48,8 @@ brew 'ctags'
 brew 'exercism'
 brew 'git'
 brew 'gnu-tar'
-brew 'go'
 brew 'htop'
 brew 'httpie'
-brew 'hub'
 brew 'mas'
 brew 'mtr'
 brew 'npm'
@@ -74,6 +72,11 @@ brew 'launchctl-completion'
 tap 'caskroom/fonts'
 cask 'font-droidsansmono-nerd-font'
 cask 'font-fira-code'
+
+# Go
+brew 'go'
+tap 'go-task/tap'
+brew 'go-task'
 
 # Nine
 if Socket.gethostname == 'odin.local'
