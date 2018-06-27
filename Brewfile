@@ -77,6 +77,7 @@ cask 'font-fira-code'
 brew 'go'
 tap 'go-task/tap'
 brew 'go-task'
+brew 'dep'
 
 # Nine
 if Socket.gethostname == 'odin.local'
