@@ -8,5 +8,6 @@ set -x GOPATH $HOME/src/go
 set -x PATH $PATH $GOPATH/bin
 
 set -x PATH $HOME/bin $PATH
+set -g fish_user_paths "/usr/local/sbin"
 
 set -x TF_VAR_nine_mnt_ssh_user phil
