@@ -14,22 +14,14 @@ Plug 'airblade/vim-gitgutter', { 'branch': 'nvim' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'duggiefresh/vim-easydir'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'gorkunov/smartgf.vim'
-Plug 'rking/ag.vim'
-Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'     " html tags auto close
-Plug 'janko-m/vim-test' " run tests in neovim
 Plug 'tomtom/tcomment_vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'ervandew/supertab'
-
-" Dash integration
-Plug 'rizzatti/funcoo.vim'
-Plug 'rizzatti/dash.vim'
 
 " Neovim stuff
 if has('nvim')
@@ -39,7 +31,6 @@ end
 
 " Language plugins
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim'
@@ -48,25 +39,16 @@ Plug 'smerrill/vcl-vim-plugin' " Varnish VCL Syntax
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 Plug 'lepture/vim-jinja'
-Plug 'mxw/vim-jsx'
-Plug 'vim-scripts/groovy.vim'
 Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 
 " Prosa and Markdown
-Plug 'asciidoc/vim-asciidoc'
 Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-markdown'
 
 " Colors
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
-
-" Snippets
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
 
 call plug#end()
 filetype plugin indent on
@@ -199,7 +181,6 @@ if has("autocmd")
   autocmd BufRead,BufNewFile *.asc set filetype=asciidoc
   autocmd BufNewFile,BufRead *.jbuilder setfiletype ruby syntax=ruby
   autocmd BufNewFile,BufRead *.j2 set ft=jinja
-  autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy syntax=groovy
 
   if has('nvim')
     " Neomake
@@ -219,9 +200,6 @@ endif
 " Toggle NerdTree
 nmap <silent> <C-N> :NERDTreeToggle<CR>
 
-" Search word under cursor in Dash
-nmap <silent> <C-D> <Plug>DashSearch
-
 " Neoterm
 if has('nvim')
   let g:neoterm_position = 'horizontal'
@@ -236,14 +214,6 @@ if has('nvim')
   :highlight NeomakeError ctermbg=0 ctermfg=196
   let g:neomake_error_sign = { 'text': '!!', 'texthl': 'NeomakeError', }
   let g:neomake_warning_sign = { 'text': 'W', 'texthl': 'NeomakeWarning', }
-endif
-
-" vim-test setup
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>l :TestLast<CR>
-if has('nvim')
-  let test#strategy = "neoterm"
 endif
 
 " Switch between splits C-j etc
@@ -265,9 +235,6 @@ noremap <Leader>f :let @+ = expand("%")<CR>
 
 " insert binding.pry
 map <Leader>bp orequire'pry';binding.pry<esc>:w<cr>
-
-" open alternative (rails spec)
-noremap <Leader>a :AV<CR>
 
 " close current window
 noremap <Leader>q :q<CR>
@@ -343,14 +310,3 @@ call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-
-" Replace ruby hash rockets with :Hashrockets
-function! s:hashrockets() range
-  let lnum = a:firstline
-  while lnum <= a:lastline
-    let newline = substitute(getline(lnum), ':\(\w\+\)\s*=>', '\1:', 'g')
-    call setline(lnum, newline)
-    let lnum += 1
-  endwhile
-endfunction
-command! -range Hashrockets :<line1>,<line2>call s:hashrockets()
