@@ -2,5 +2,6 @@
 /vim/bundle
 /vim/init.vim
 /vim/.netrwhist
+/vim/plugged
 /bundle/cache
 config/fish/fishd.*

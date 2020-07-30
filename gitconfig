@@ -17,7 +17,7 @@
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
   whitespace = space-before-tab,trailing-space
 	excludesfile = /Users/phil/.gitignore
-	editor = nvim
+	editor = vim
 
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -50,7 +50,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -73,7 +73,5 @@ protocol = git
 	user = neckhair
 [diff]
 	compactionHeuristic = true
-[commit]
-	gpgsign = true
 [url "git@gitlab.nine.ch:"]
 	insteadOf = https://gitlab.nine.ch/

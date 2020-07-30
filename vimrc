@@ -14,7 +14,6 @@ Plug 'airblade/vim-gitgutter', { 'branch': 'nvim' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'duggiefresh/vim-easydir'
-Plug 'gorkunov/smartgf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'     " html tags auto close
 Plug 'tomtom/tcomment_vim'
