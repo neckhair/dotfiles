@@ -8,6 +8,7 @@
   squash = rebase -i --autosquash
   cb = rev-parse --abbrev-ref HEAD
   stash-all = stash save --include-untracked
+  aa = commit -a --amend
 
 [apply]
   # Detect whitespace errors when applying a patch
