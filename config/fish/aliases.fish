@@ -15,3 +15,5 @@ alias kns "kubens"
 
 # run curl on kubernetes
 alias kubecurl "kubectl run busybox -ti --rm --image=radial/busyboxplus:curl --restart=Never -- curl"
+
+alias mnt "ssh phil.nine.ch"
