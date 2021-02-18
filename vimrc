@@ -1,4 +1,4 @@
-set shell=/bin/zsh
+set shell=/bin/bash
 
 autocmd!
 set nocompatible
@@ -48,6 +48,7 @@ Plug 'tpope/vim-markdown'
 " Colors
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasr/molokai'
+Plug 'dracula/vim', { 'as': 'dracula'  }
 
 call plug#end()
 filetype plugin indent on
@@ -59,7 +60,7 @@ let mapleader = ","
 set background=dark
 let g:rehash256=1
 set t_Co=256
-colorscheme sexy-railscasts-256
+colorscheme dracula
 set linespace=2
 
 " Use the OS clipboard by default
