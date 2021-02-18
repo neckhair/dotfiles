@@ -9,6 +9,7 @@
   cb = rev-parse --abbrev-ref HEAD
   stash-all = stash save --include-untracked
   aa = commit -a --amend
+  pr = pull --rebase
 
 [apply]
   # Detect whitespace errors when applying a patch
@@ -49,12 +50,6 @@
 	email = phil@nine.ch
   signingkey = 57338A09DD84E473
 
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [fetch]
 	prune = true
 
